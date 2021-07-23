@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Capa_Negocio;
 
 namespace Proyecto_Ferreteria
 {
     public partial class Inicio : Form
     {
+        CNUsuario objetoCN = new CNUsuario();
         public Inicio()
         {
             InitializeComponent();
@@ -33,18 +35,21 @@ namespace Proyecto_Ferreteria
             }
             else
             {
-                logear(txt_usuario.Text, txt_password.Text);
+                int rol = objetoCN.logeo(txt_usuario.Text, txt_password.Text);
+                if (rol == 1)
+                {
+                    this.Hide();
+                    new Administrador().ShowDialog();
+                    this.Close();
+                }
+                else if (rol == 2)
+                {
+                    this.Hide();
+                    new Inventario().ShowDialog();
+                    this.Close();
+                }
             }
         }
-
-        private void logear(string usuario, string contraseña) 
-        {
-
-
-
-        }
-
-
 
         private void linkregistro_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {

@@ -10,6 +10,7 @@ namespace Capa_Datos
 {
     public class CDUsuario
     {
+        private SqlConnection co = new SqlConnection("Data Source=VICTORIA;Initial Catalog=dbFerreteria;Integrated Security=True");
         private CDConexion con = new CDConexion();
 
         public int login(string correo, string pass)
@@ -18,7 +19,7 @@ namespace Capa_Datos
             try
             {
                 con.abrirCon();
-                SqlCommand cmd = new SqlCommand("Select idRol from TblUsuario where correoUsu=@correo and passUsu=@pass");
+                SqlCommand cmd = new SqlCommand("Select * from TblUsuario where correoUsu=@correo and passUsu=@pass", co);
                 cmd.Parameters.AddWithValue("correo", correo);
                 cmd.Parameters.AddWithValue("pass", pass);
                 SqlDataAdapter sda = new SqlDataAdapter(cmd);
@@ -27,11 +28,11 @@ namespace Capa_Datos
                 con.cerrarCon();
                 if (dt.Rows.Count == 1)
                 {
-                    if (dt.Rows[0][1].ToString() == "1")
+                    if (dt.Rows[0][4].ToString() == "1")
                     {
                         Rol = 1;
                     }
-                    else if (dt.Rows[0][1].ToString() == "2")
+                    else if (dt.Rows[0][4].ToString() == "2")
                     {
                         Rol = 2;
                     }
