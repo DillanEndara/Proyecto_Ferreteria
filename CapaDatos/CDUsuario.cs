@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 
 namespace Capa_Datos
 {
-    class CDUsuario
+    public class CDUsuario
     {
         private CDConexion con = new CDConexion();
 
