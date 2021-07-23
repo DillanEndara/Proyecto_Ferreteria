@@ -29,35 +29,35 @@ namespace Proyecto_Ferreteria
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_usuario = new System.Windows.Forms.TextBox();
+            this.txt_password = new System.Windows.Forms.TextBox();
             this.butingreso = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.linkregistro = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txt_usuario
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(253, 148);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(202, 29);
-            this.textBox1.TabIndex = 3;
+            this.txt_usuario.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_usuario.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_usuario.Location = new System.Drawing.Point(253, 148);
+            this.txt_usuario.Name = "txt_usuario";
+            this.txt_usuario.Size = new System.Drawing.Size(202, 29);
+            this.txt_usuario.TabIndex = 3;
             // 
-            // textBox2
+            // txt_password
             // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox2.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(253, 217);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(202, 29);
-            this.textBox2.TabIndex = 4;
+            this.txt_password.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_password.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_password.Location = new System.Drawing.Point(253, 217);
+            this.txt_password.Name = "txt_password";
+            this.txt_password.Size = new System.Drawing.Size(202, 29);
+            this.txt_password.TabIndex = 4;
             // 
             // butingreso
             // 
@@ -75,6 +75,7 @@ namespace Proyecto_Ferreteria
             this.butingreso.Text = "INGRESAR";
             this.butingreso.UseVisualStyleBackColor = false;
             this.butingreso.UseWaitCursor = true;
+            this.butingreso.Click += new System.EventHandler(this.butingreso_Click);
             // 
             // pictureBox2
             // 
@@ -109,7 +110,7 @@ namespace Proyecto_Ferreteria
             this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label1.Location = new System.Drawing.Point(146, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(276, 37);
+            this.label1.Size = new System.Drawing.Size(266, 36);
             this.label1.TabIndex = 9;
             this.label1.Text = "Ferreteria XD";
             // 
@@ -125,20 +126,21 @@ namespace Proyecto_Ferreteria
             this.label2.TabIndex = 10;
             this.label2.Text = "Número de Intentos:";
             // 
-            // linkLabel1
+            // linkregistro
             // 
-            this.linkLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.linkLabel1.DisabledLinkColor = System.Drawing.Color.Black;
-            this.linkLabel1.Font = new System.Drawing.Font("Modern No. 20", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.LinkColor = System.Drawing.Color.White;
-            this.linkLabel1.Location = new System.Drawing.Point(459, 354);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(73, 20);
-            this.linkLabel1.TabIndex = 11;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Registrar";
+            this.linkregistro.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.linkregistro.AutoSize = true;
+            this.linkregistro.BackColor = System.Drawing.Color.Transparent;
+            this.linkregistro.DisabledLinkColor = System.Drawing.Color.Black;
+            this.linkregistro.Font = new System.Drawing.Font("Modern No. 20", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkregistro.LinkColor = System.Drawing.Color.White;
+            this.linkregistro.Location = new System.Drawing.Point(459, 354);
+            this.linkregistro.Name = "linkregistro";
+            this.linkregistro.Size = new System.Drawing.Size(73, 20);
+            this.linkregistro.TabIndex = 11;
+            this.linkregistro.TabStop = true;
+            this.linkregistro.Text = "Registrar";
+            this.linkregistro.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkregistro_LinkClicked);
             // 
             // Inicio
             // 
@@ -147,14 +149,14 @@ namespace Proyecto_Ferreteria
             this.BackgroundImage = global::Proyecto_Ferreteria.Properties.Resources.Inicio;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(577, 398);
-            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.linkregistro);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.butingreso);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_password);
+            this.Controls.Add(this.txt_usuario);
             this.MinimizeBox = false;
             this.Name = "Inicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -168,13 +170,13 @@ namespace Proyecto_Ferreteria
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_usuario;
+        private System.Windows.Forms.TextBox txt_password;
         private System.Windows.Forms.Button butingreso;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel linkregistro;
     }
 }

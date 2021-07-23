@@ -17,9 +17,18 @@ namespace Proyecto_Ferreteria
             InitializeComponent();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void butsalir_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            new Inicio().ShowDialog();
+            this.Close();
+        }
 
+        private void butcomprar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Compra().ShowDialog();
+            this.Close();
         }
     }
 }

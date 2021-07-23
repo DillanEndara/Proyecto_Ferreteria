@@ -107,6 +107,7 @@ namespace Proyecto_Ferreteria
             this.butsalir.TabIndex = 8;
             this.butsalir.Text = "SALIR";
             this.butsalir.UseVisualStyleBackColor = true;
+            this.butsalir.Click += new System.EventHandler(this.butsalir_Click);
             // 
             // butcomprar
             // 
@@ -118,6 +119,7 @@ namespace Proyecto_Ferreteria
             this.butcomprar.TabIndex = 7;
             this.butcomprar.Text = "COMPRAR";
             this.butcomprar.UseVisualStyleBackColor = true;
+            this.butcomprar.Click += new System.EventHandler(this.butcomprar_Click);
             // 
             // buteliminar
             // 
@@ -151,7 +153,6 @@ namespace Proyecto_Ferreteria
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(742, 158);
             this.dataGridView1.TabIndex = 4;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label2
             // 

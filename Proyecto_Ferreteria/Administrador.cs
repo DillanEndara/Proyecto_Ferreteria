@@ -16,5 +16,12 @@ namespace Proyecto_Ferreteria
         {
             InitializeComponent();
         }
+
+        private void butsalir_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Inicio().ShowDialog();
+            this.Close();
+        }
     }
 }
