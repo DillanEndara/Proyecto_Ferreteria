@@ -10,43 +10,39 @@ namespace Capa_Datos
 {
     public class CDUsuario
     {
-        private SqlConnection co = new SqlConnection("Data Source=VICTORIA;Initial Catalog=dbFerreteria;Integrated Security=True");
         private CDConexion con = new CDConexion();
+        SqlCommand cmd = new SqlCommand();
 
-        public int login(string correo, string pass)
+        public DataTable login(string correo, string pass)
         {
-            int Rol = 0;
-            try
-            {
-                con.abrirCon();
-                SqlCommand cmd = new SqlCommand("Select * from TblUsuario where correoUsu=@correo and passUsu=@pass", co);
-                cmd.Parameters.AddWithValue("correo", correo);
-                cmd.Parameters.AddWithValue("pass", pass);
-                SqlDataAdapter sda = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
-                con.cerrarCon();
-                if (dt.Rows.Count == 1)
-                {
-                    if (dt.Rows[0][4].ToString() == "1")
-                    {
-                        Rol = 1;
-                    }
-                    else if (dt.Rows[0][4].ToString() == "2")
-                    {
-                        Rol = 2;
-                    }
-                }
-                else
-                {
-                    Rol = 0;
-                }
-                return Rol;
-            }
-            catch (Exception)
-            {
-                throw;
-            }
+            cmd.Connection = con.abrirCon();
+            cmd.CommandText = "BusquedaUsuario";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@correo", correo);
+            cmd.Parameters.AddWithValue("@pass", pass);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            cmd.Parameters.Clear();
+            cmd.Connection = con.cerrarCon();
+            return dt;
+        }
+
+        public void crearUuario(string nombre, string apellido, string correo, int rol, string pass, string ced, int telf)
+        {
+            cmd.Connection = con.abrirCon();
+            cmd.CommandText = "RegistroUsuario";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@nombre", nombre);
+            cmd.Parameters.AddWithValue("@apellido", apellido);
+            cmd.Parameters.AddWithValue("@correo", correo);
+            cmd.Parameters.AddWithValue("@rol", rol);
+            cmd.Parameters.AddWithValue("@pass", pass);
+            cmd.Parameters.AddWithValue("@ced", ced);
+            cmd.Parameters.AddWithValue("@telf", telf);
+            cmd.ExecuteNonQuery();
+            cmd.Parameters.Clear();
+            cmd.Connection = con.cerrarCon();
         }
     }
 }

@@ -17,5 +17,19 @@ namespace Proyecto_Ferreteria
             InitializeComponent();
         }
 
+        private void butagregar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buteditar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buteliminar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

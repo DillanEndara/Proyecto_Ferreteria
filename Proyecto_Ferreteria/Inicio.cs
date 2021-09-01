@@ -8,13 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
-//using Capa_Negocio;
+using Capa_Negocio;
 
 namespace Proyecto_Ferreteria
 {
     public partial class Inicio : Form
     {
-        //CNUsuario objetoCN = new CNUsuario();
+        CNUsuario objetoCN = new CNUsuario();
+        static int contador=5;
         public Inicio()
         {
             InitializeComponent();
@@ -40,98 +41,32 @@ namespace Proyecto_Ferreteria
             }
         }
 
-        private void logear(string usuario, string contraseña)
+        private void logear(string usuario, string contrasena)
         {
-             /*con.Open();
-
-            //Seleccionar el nombre y tipo de usuario desde la tabla y muestra
-            //el usuario y la contraseña siempre y cuando sean iguales 
-            SqlCommand cmd = new SqlCommand("select usu_nombre, usu_password from Tbl_Usuario where usu_nomlogin = @usu", con);
-            cmd.Parameters.AddWithValue("usu", usuario);
-
-            //traduce el codigo desde sql a visual va a comparar lo ingresado con las tablas
-            SqlDataAdapter sda = new SqlDataAdapter(cmd);
-
-            //muestra la tabla y permite interactuar
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-
-            con.Close();
-            try
+            int rol;
+            rol = objetoCN.logeo(usuario, contrasena);
+            if (rol == 1)
             {
-
-                if (dt.Rows.Count == 1)
+                this.Hide();
+                new Form1().ShowDialog();
+                this.Close();
+            }
+            else if (rol == 2)
+            {
+                this.Hide();
+                new Form1().ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Informacion incorrecta!\n");
+                lblContador.Text = contador.ToString();
+                contador--;
+                if (contador == 0)
                 {
-
-                    string encrypt = "HASHBYTES('MD5','" + contraseña + "')";
-                    con.Open();
-
-                    //Verificación a través de una consulta para ver los datos del usuario
-                    SqlCommand cmd1 = new SqlCommand("select usu_nombre ,tusu_id  from Tbl_Usuario" +
-                        " where usu_nomlogin = @us and usu_password = " + encrypt, con);
-
-                    cmd1.Parameters.AddWithValue("us", usuario);
-
-                    //Traduce el codigo desde sql a visual para comparar lo ingresado con las tablas
-                    SqlDataAdapter sda1 = new SqlDataAdapter(cmd1);
-
-                    //Muestra la tabla y permite interactuar
-                    DataTable dt1 = new DataTable();
-                    sda1.Fill(dt1);
-
-                    //Termina la conexion 
-                    con.Close();
-
-                    //Validar el usuario
-                    if (dt1.Rows.Count == 1)
-                    {
-                        this.Hide();
-                        int rol = objetoCN.logeo(txt_usuario.Text, txt_password.Text);
-                        if (rol == 1)
-                        {
-                                this.Hide();
-                                new Form1().ShowDialog();
-                                this.Close();
-                        }
-                        else if (rol == 2)
-                        {
-                                this.Hide();
-                                new Form1().ShowDialog();
-                                this.Close();
-                        }
-                        this.Close();
-
-                    }
-                    else
-                    {
-                        MessageBox.Show("Contraseña incorrecta!\n");
-                        lbl_intentos.Text = contador.ToString();
-                        contador--;
-                        if (lbl_intentos.Text == "0")
-                        {
-                            //Bloqueo del usuario en la Base de Datos
-                            con.Open();
-                            SqlCommand cmd3 = new SqlCommand("UPDATE Tbl_Usuario SET usu_estado = 'I'  WHERE usu_nomlogin ='" + usuario + "'", con);
-                            cmd3.ExecuteNonQuery();
-                            con.Close();
-
-                            MessageBox.Show("Límite de intentos superado \n Usuario Bloqueado");
-                            btningresar.Enabled = false;
-                        }
-                    }
-
-                }
-                else
-                {
-                    MessageBox.Show("Usuario incorrecto (No existe)");
+                    this.Close();
                 }
             }
-            catch (Exception)
-            {
-
-                throw;
-            }*/
-
         }
 
         private void linkregistro_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
