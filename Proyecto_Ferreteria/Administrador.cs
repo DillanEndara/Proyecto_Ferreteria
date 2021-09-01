@@ -25,7 +25,7 @@ namespace Proyecto_Ferreteria
         {
             try
             {
-                objetoCN.agregarProducto(textBox1.Text,textBox2.Text,comboBox1.SelectedValue.ToString(),textBox5.Text, textBox4.Text, textBox3.Text);
+                objetoCN.agregarProducto(txtcateg.Text,txtprod.Text,cmbcateg.SelectedValue.ToString(),txtprecio.Text, txtcant.Text, txtdescri.Text);
                 MessageBox.Show("Se agregó el producto correctamente");
                 mostrarProd();
                 limpiar();
@@ -41,7 +41,7 @@ namespace Proyecto_Ferreteria
         {
             try
             {
-                objetoCN.editarProd(textBox1.Text, textBox2.Text, comboBox1.SelectedValue.ToString(), textBox5.Text, textBox4.Text, textBox3.Text, idCol);
+                objetoCN.editarProd(txtcateg.Text, txtprod.Text, cmbcateg.SelectedValue.ToString(), txtprecio.Text, txtcant.Text, txtdescri.Text, idCol);
                 MessageBox.Show("Se editó correctamente");
                 mostrarProd();
                 limpiar();
@@ -78,9 +78,9 @@ namespace Proyecto_Ferreteria
 
         private void Administrador_Load(object sender, EventArgs e)
         {
-            comboBox1.DisplayMember = "nombreCat";
-            comboBox1.ValueMember = "idCat";
-            comboBox1.DataSource = objetoCN.listarCat();
+            cmbcateg.DisplayMember = "nombreCat";
+            cmbcateg.ValueMember = "idCat";
+            cmbcateg.DataSource = objetoCN.listarCat();
             mostrarProd();
         }
 
@@ -92,7 +92,7 @@ namespace Proyecto_Ferreteria
 
         public void limpiar()
         {
-            textBox1.Text = textBox2.Text = comboBox1.Text = textBox5.Text = textBox4.Text = textBox3.Text = "";
+            txtcateg.Text = txtprod.Text = cmbcateg.Text = txtprecio.Text = txtcant.Text = txtdescri.Text = "";
         }
 
         private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -100,12 +100,12 @@ namespace Proyecto_Ferreteria
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 //buteditar = true;
-                textBox1.Text = dataGridView1.CurrentRow.Cells["codigoPro"].Value.ToString();
-                textBox2.Text = dataGridView1.CurrentRow.Cells["nombrePro"].Value.ToString();
-                comboBox1.Text = dataGridView1.CurrentRow.Cells["nombreCat"].Value.ToString();
-                textBox5.Text = dataGridView1.CurrentRow.Cells["precioVentaPro"].Value.ToString();
-                textBox4.Text = dataGridView1.CurrentRow.Cells["stockPro"].Value.ToString();
-                textBox3.Text = dataGridView1.CurrentRow.Cells["descripcionPro"].Value.ToString();
+                txtcateg.Text = dataGridView1.CurrentRow.Cells["codigoPro"].Value.ToString();
+                txtprod.Text = dataGridView1.CurrentRow.Cells["nombrePro"].Value.ToString();
+                cmbcateg.Text = dataGridView1.CurrentRow.Cells["nombreCat"].Value.ToString();
+                txtprecio.Text = dataGridView1.CurrentRow.Cells["precioVentaPro"].Value.ToString();
+                txtcant.Text = dataGridView1.CurrentRow.Cells["stockPro"].Value.ToString();
+                txtdescri.Text = dataGridView1.CurrentRow.Cells["descripcionPro"].Value.ToString();
                 idCol = dataGridView1.CurrentRow.Cells["idPro"].Value.ToString();
             }
             else

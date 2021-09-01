@@ -37,6 +37,13 @@ namespace Capa_Negocio
             }  
         }
 
+
+        CDUsuario objd = new CDUsuario();
+        public DataTable CNusuario(CEUsuario obje)
+        {
+            return objd.CDusuario(obje);
+        }
+
         public void registrar(string nombre, string apellido, string correo, string rol, string pass, string ced, string telf)
         {
             objetoCD.crearUuario(nombre, apellido, correo, Convert.ToInt32(rol), pass, ced, Convert.ToInt32(telf));

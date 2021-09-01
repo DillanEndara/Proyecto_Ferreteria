@@ -30,7 +30,7 @@ namespace Proyecto_Ferreteria
         {
             try
             {
-                objetoCN.registrar(textBox2.Text, textBox3.Text, textBox6.Text, comboBox1.SelectedValue.ToString(), textBox5.Text, textBox1.Text, textBox4.Text);
+                objetoCN.registrar(txtnom.Text, txtape.Text, txtcor.Text, cmbrol.SelectedValue.ToString(), txtcon.Text, txtced.Text, txttel.Text);
                 MessageBox.Show("Usuario registrado correctamente");
             }
             catch (Exception)
@@ -42,9 +42,9 @@ namespace Proyecto_Ferreteria
 
         private void Registro_Load(object sender, EventArgs e)
         {
-            comboBox1.DisplayMember = "nombreRol";
-            comboBox1.ValueMember = "idRol";
-            comboBox1.DataSource = objetoCN.listarRol();
+            cmbrol.DisplayMember = "nombreRol";
+            cmbrol.ValueMember = "idRol";
+            cmbrol.DataSource = objetoCN.listarRol();
         }
     }
 }

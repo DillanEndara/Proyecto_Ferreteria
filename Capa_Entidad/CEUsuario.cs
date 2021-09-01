@@ -9,7 +9,7 @@ namespace Capa_Entidad
     public class CEUsuario
     {
         //se encargan de enviar y recibir datos
-        public string usuario { get; set; }
-        public string clave { get; set; }
+        public string correo { get; set; }
+        public string pass { get; set; }
     }
 }

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using Capa_Negocio;
+using Capa_Entidad;
 
 namespace Proyecto_Ferreteria
 {
@@ -42,9 +43,50 @@ namespace Proyecto_Ferreteria
             }
         }
 
+        CEUsuario objeuser = new CEUsuario();
+        CNUsuario objnuser = new CNUsuario();
+        Form1 frm1 = new Form1();
+        public static string correo;
+        public static string rol;
+
+
         private void logear(string usuario, string contraseña)
         {
-            int rol;
+            DataTable dt = new DataTable();
+            objeuser.correo = txt_usuario.Text;
+            objeuser.pass = txt_password.Text;
+
+            dt = objnuser.CNusuario(objeuser);
+            if (dt.Rows.Count > 0)
+            {
+                MessageBox.Show("Bienvenido ", "Mensaje ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                correo = dt.Rows[0][1].ToString();
+                rol = dt.Rows[0][0].ToString();
+
+                frm1.ShowDialog();
+                Inicio login = new Inicio();
+                login.ShowDialog();
+                if (login.DialogResult == DialogResult.OK)
+                    Application.Run(new Inicio());
+                txt_usuario.Clear();
+                txt_password.Clear();
+
+            }
+            else
+            {
+                MessageBox.Show("Informacion Incorrecta", "Mensaje", MessageBoxButtons.OK,MessageBoxIcon.Information);
+                contador--;
+                lblContador.Text = contador.ToString();
+                if (contador == 0)
+                {
+                    MessageBox.Show("Cantidad de intentos excedida");
+                    this.Close();
+                }
+            }
+
+
+
+            /*int rol;
             rol = objetoCN.logeo(usuario, contraseña);
             Form1 fr = new Form1(rol);
             if (rol == 1)
@@ -69,7 +111,7 @@ namespace Proyecto_Ferreteria
                     MessageBox.Show("Cantidad de intentos excedida");
                     this.Close();
                 }
-            }
+            }*/
         }
 
         private void linkregistro_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

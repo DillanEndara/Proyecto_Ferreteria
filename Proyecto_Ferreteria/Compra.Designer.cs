@@ -30,11 +30,11 @@ namespace Proyecto_Ferreteria
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvComp = new System.Windows.Forms.DataGridView();
             this.butcancelar = new System.Windows.Forms.Button();
             this.butconfirmar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvComp)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -44,7 +44,7 @@ namespace Proyecto_Ferreteria
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackgroundImage = global::Proyecto_Ferreteria.Properties.Resources.MADERA;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.dgvComp);
             this.panel1.Controls.Add(this.butcancelar);
             this.panel1.Controls.Add(this.butconfirmar);
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -52,18 +52,18 @@ namespace Proyecto_Ferreteria
             this.panel1.Size = new System.Drawing.Size(800, 452);
             this.panel1.TabIndex = 0;
             // 
-            // dataGridView1
+            // dgvComp
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvComp.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(88, 31);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(598, 314);
-            this.dataGridView1.TabIndex = 2;
+            this.dgvComp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvComp.Location = new System.Drawing.Point(88, 31);
+            this.dgvComp.Name = "dgvComp";
+            this.dgvComp.RowHeadersWidth = 51;
+            this.dgvComp.RowTemplate.Height = 24;
+            this.dgvComp.Size = new System.Drawing.Size(598, 314);
+            this.dgvComp.TabIndex = 2;
             // 
             // butcancelar
             // 
@@ -97,7 +97,7 @@ namespace Proyecto_Ferreteria
             this.Name = "Compra";
             this.Text = "Compra";
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvComp)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -106,7 +106,7 @@ namespace Proyecto_Ferreteria
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button butconfirmar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvComp;
         private System.Windows.Forms.Button butcancelar;
     }
 }

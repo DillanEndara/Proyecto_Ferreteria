@@ -8,6 +8,7 @@ using System.Data.SqlClient;
 using System.Configuration;
 using Capa_Entidad;
 
+
 namespace Capa_Datos
 {
     public class CDUsuario
@@ -16,6 +17,19 @@ namespace Capa_Datos
         SqlCommand cmd = new SqlCommand();
         SqlDataReader leer;
         DataTable tabla = new DataTable();
+
+        SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["sql"].ConnectionString);
+        public DataTable CDusuario(CEUsuario obje)
+        {
+            SqlCommand cmd = new SqlCommand("sp_logue_ez", cn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@correo", obje.correo);
+            cmd.Parameters.AddWithValue("@pass", obje.pass);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
 
         public DataTable login(string correo, string pass)
         {
