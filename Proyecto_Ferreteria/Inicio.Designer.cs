@@ -66,7 +66,7 @@ namespace Proyecto_Ferreteria
             this.txt_password.Location = new System.Drawing.Point(179, 204);
             this.txt_password.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_password.Name = "txt_password";
-            this.txt_password.Size = new System.Drawing.Size(152, 25);
+            this.txt_password.Size = new System.Drawing.Size(202, 29);
             this.txt_password.TabIndex = 4;
             // 
             // butingreso

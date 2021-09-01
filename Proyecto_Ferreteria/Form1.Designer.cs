@@ -31,32 +31,32 @@ namespace Proyecto_Ferreteria
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.BarraTitulo = new System.Windows.Forms.Panel();
+            this.btnRestaurar = new System.Windows.Forms.PictureBox();
+            this.btnMinimizar = new System.Windows.Forms.PictureBox();
+            this.btnMaximizar = new System.Windows.Forms.PictureBox();
+            this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.MenuVertical = new System.Windows.Forms.Panel();
+            this.btninicio = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnadm = new System.Windows.Forms.Button();
+            this.btncliente = new System.Windows.Forms.Button();
             this.Submenucliente = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.btnpagos = new System.Windows.Forms.Button();
             this.btncompra = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.btnadm = new System.Windows.Forms.Button();
-            this.btncliente = new System.Windows.Forms.Button();
             this.btnsalir = new System.Windows.Forms.PictureBox();
-            this.btnRestaurar = new System.Windows.Forms.PictureBox();
-            this.btnMinimizar = new System.Windows.Forms.PictureBox();
-            this.btnMaximizar = new System.Windows.Forms.PictureBox();
-            this.btnCerrar = new System.Windows.Forms.PictureBox();
-            this.btninicio = new System.Windows.Forms.PictureBox();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.panelvista = new System.Windows.Forms.Panel();
             this.BarraTitulo.SuspendLayout();
-            this.MenuVertical.SuspendLayout();
-            this.Submenucliente.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnsalir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
+            this.MenuVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btninicio)).BeginInit();
+            this.Submenucliente.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnsalir)).BeginInit();
             this.SuspendLayout();
             // 
             // BarraTitulo
@@ -73,6 +73,63 @@ namespace Proyecto_Ferreteria
             this.BarraTitulo.Size = new System.Drawing.Size(1195, 59);
             this.BarraTitulo.TabIndex = 1;
             this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
+            // 
+            // btnRestaurar
+            // 
+            this.btnRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRestaurar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRestaurar.Image = ((System.Drawing.Image)(resources.GetObject("btnRestaurar.Image")));
+            this.btnRestaurar.Location = new System.Drawing.Point(1090, 7);
+            this.btnRestaurar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRestaurar.Name = "btnRestaurar";
+            this.btnRestaurar.Size = new System.Drawing.Size(33, 31);
+            this.btnRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnRestaurar.TabIndex = 3;
+            this.btnRestaurar.TabStop = false;
+            this.btnRestaurar.Visible = false;
+            this.btnRestaurar.Click += new System.EventHandler(this.btnRestaurar_Click_1);
+            // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.Image")));
+            this.btnMinimizar.Location = new System.Drawing.Point(1035, 7);
+            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(33, 31);
+            this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnMinimizar.TabIndex = 2;
+            this.btnMinimizar.TabStop = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click_1);
+            // 
+            // btnMaximizar
+            // 
+            this.btnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMaximizar.Image")));
+            this.btnMaximizar.Location = new System.Drawing.Point(1090, 7);
+            this.btnMaximizar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMaximizar.Name = "btnMaximizar";
+            this.btnMaximizar.Size = new System.Drawing.Size(33, 31);
+            this.btnMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnMaximizar.TabIndex = 1;
+            this.btnMaximizar.TabStop = false;
+            this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click_1);
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
+            this.btnCerrar.Location = new System.Drawing.Point(1145, 7);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(33, 31);
+            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnCerrar.TabIndex = 0;
+            this.btnCerrar.TabStop = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // MenuVertical
             // 
@@ -91,6 +148,19 @@ namespace Proyecto_Ferreteria
             this.MenuVertical.Size = new System.Drawing.Size(300, 629);
             this.MenuVertical.TabIndex = 3;
             // 
+            // btninicio
+            // 
+            this.btninicio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btninicio.Image = ((System.Drawing.Image)(resources.GetObject("btninicio.Image")));
+            this.btninicio.Location = new System.Drawing.Point(0, 0);
+            this.btninicio.Margin = new System.Windows.Forms.Padding(4);
+            this.btninicio.Name = "btninicio";
+            this.btninicio.Size = new System.Drawing.Size(300, 140);
+            this.btninicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btninicio.TabIndex = 21;
+            this.btninicio.TabStop = false;
+            this.btninicio.Click += new System.EventHandler(this.btninicio_Click);
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
@@ -99,6 +169,45 @@ namespace Proyecto_Ferreteria
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(7, 49);
             this.panel2.TabIndex = 20;
+            // 
+            // btnadm
+            // 
+            this.btnadm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnadm.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnadm.FlatAppearance.BorderSize = 0;
+            this.btnadm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnadm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnadm.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnadm.ForeColor = System.Drawing.Color.White;
+            this.btnadm.Image = ((System.Drawing.Image)(resources.GetObject("btnadm.Image")));
+            this.btnadm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnadm.Location = new System.Drawing.Point(7, 148);
+            this.btnadm.Margin = new System.Windows.Forms.Padding(4);
+            this.btnadm.Name = "btnadm";
+            this.btnadm.Size = new System.Drawing.Size(289, 49);
+            this.btnadm.TabIndex = 19;
+            this.btnadm.Text = "Administrador";
+            this.btnadm.UseVisualStyleBackColor = false;
+            this.btnadm.Click += new System.EventHandler(this.btnadm_Click);
+            // 
+            // btncliente
+            // 
+            this.btncliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btncliente.FlatAppearance.BorderSize = 0;
+            this.btncliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btncliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btncliente.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncliente.ForeColor = System.Drawing.Color.White;
+            this.btncliente.Image = ((System.Drawing.Image)(resources.GetObject("btncliente.Image")));
+            this.btncliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btncliente.Location = new System.Drawing.Point(11, 205);
+            this.btncliente.Margin = new System.Windows.Forms.Padding(4);
+            this.btncliente.Name = "btncliente";
+            this.btncliente.Size = new System.Drawing.Size(289, 49);
+            this.btncliente.TabIndex = 18;
+            this.btncliente.Text = "Clientes";
+            this.btncliente.UseVisualStyleBackColor = false;
+            this.btncliente.Click += new System.EventHandler(this.btncliente_Click);
             // 
             // Submenucliente
             // 
@@ -167,54 +276,6 @@ namespace Proyecto_Ferreteria
             this.panel9.Size = new System.Drawing.Size(7, 34);
             this.panel9.TabIndex = 17;
             // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.panel6.Location = new System.Drawing.Point(1, 205);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(7, 49);
-            this.panel6.TabIndex = 12;
-            // 
-            // btnadm
-            // 
-            this.btnadm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnadm.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnadm.FlatAppearance.BorderSize = 0;
-            this.btnadm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.btnadm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnadm.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnadm.ForeColor = System.Drawing.Color.White;
-            this.btnadm.Image = ((System.Drawing.Image)(resources.GetObject("btnadm.Image")));
-            this.btnadm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnadm.Location = new System.Drawing.Point(7, 148);
-            this.btnadm.Margin = new System.Windows.Forms.Padding(4);
-            this.btnadm.Name = "btnadm";
-            this.btnadm.Size = new System.Drawing.Size(289, 49);
-            this.btnadm.TabIndex = 19;
-            this.btnadm.Text = "Administrador";
-            this.btnadm.UseVisualStyleBackColor = false;
-            this.btnadm.Click += new System.EventHandler(this.btnadm_Click);
-            // 
-            // btncliente
-            // 
-            this.btncliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btncliente.FlatAppearance.BorderSize = 0;
-            this.btncliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.btncliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btncliente.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btncliente.ForeColor = System.Drawing.Color.White;
-            this.btncliente.Image = ((System.Drawing.Image)(resources.GetObject("btncliente.Image")));
-            this.btncliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btncliente.Location = new System.Drawing.Point(11, 205);
-            this.btncliente.Margin = new System.Windows.Forms.Padding(4);
-            this.btncliente.Name = "btncliente";
-            this.btncliente.Size = new System.Drawing.Size(289, 49);
-            this.btncliente.TabIndex = 18;
-            this.btncliente.Text = "Clientes";
-            this.btncliente.UseVisualStyleBackColor = false;
-            this.btncliente.Click += new System.EventHandler(this.btncliente_Click);
-            // 
             // btnsalir
             // 
             this.btnsalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -229,75 +290,14 @@ namespace Proyecto_Ferreteria
             this.btnsalir.TabStop = false;
             this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
             // 
-            // btnRestaurar
+            // panel6
             // 
-            this.btnRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRestaurar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRestaurar.Image = ((System.Drawing.Image)(resources.GetObject("btnRestaurar.Image")));
-            this.btnRestaurar.Location = new System.Drawing.Point(1090, 7);
-            this.btnRestaurar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnRestaurar.Name = "btnRestaurar";
-            this.btnRestaurar.Size = new System.Drawing.Size(33, 31);
-            this.btnRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnRestaurar.TabIndex = 3;
-            this.btnRestaurar.TabStop = false;
-            this.btnRestaurar.Visible = false;
-            this.btnRestaurar.Click += new System.EventHandler(this.btnRestaurar_Click_1);
-            // 
-            // btnMinimizar
-            // 
-            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.Image")));
-            this.btnMinimizar.Location = new System.Drawing.Point(1035, 7);
-            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(33, 31);
-            this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnMinimizar.TabIndex = 2;
-            this.btnMinimizar.TabStop = false;
-            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click_1);
-            // 
-            // btnMaximizar
-            // 
-            this.btnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMaximizar.Image")));
-            this.btnMaximizar.Location = new System.Drawing.Point(1090, 7);
-            this.btnMaximizar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnMaximizar.Name = "btnMaximizar";
-            this.btnMaximizar.Size = new System.Drawing.Size(33, 31);
-            this.btnMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnMaximizar.TabIndex = 1;
-            this.btnMaximizar.TabStop = false;
-            this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click_1);
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
-            this.btnCerrar.Location = new System.Drawing.Point(1145, 7);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(33, 31);
-            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnCerrar.TabIndex = 0;
-            this.btnCerrar.TabStop = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            // 
-            // btninicio
-            // 
-            this.btninicio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btninicio.Image = ((System.Drawing.Image)(resources.GetObject("btninicio.Image")));
-            this.btninicio.Location = new System.Drawing.Point(0, 0);
-            this.btninicio.Margin = new System.Windows.Forms.Padding(4);
-            this.btninicio.Name = "btninicio";
-            this.btninicio.Size = new System.Drawing.Size(300, 140);
-            this.btninicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btninicio.TabIndex = 21;
-            this.btninicio.TabStop = false;
-            this.btninicio.Click += new System.EventHandler(this.btninicio_Click);
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.panel6.Location = new System.Drawing.Point(1, 205);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(7, 49);
+            this.panel6.TabIndex = 12;
             // 
             // panelvista
             // 
@@ -320,17 +320,18 @@ namespace Proyecto_Ferreteria
             this.Controls.Add(this.BarraTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.BarraTitulo.ResumeLayout(false);
-            this.MenuVertical.ResumeLayout(false);
-            this.Submenucliente.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnsalir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
+            this.MenuVertical.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btninicio)).EndInit();
+            this.Submenucliente.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnsalir)).EndInit();
             this.ResumeLayout(false);
 
         }
