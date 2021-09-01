@@ -39,7 +39,10 @@ namespace Proyecto_Ferreteria
             // 
             // panel1
             // 
-            this.panel1.BackgroundImage = global::Proyecto_Ferreteria.Properties.Resources.Compra;
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackgroundImage = global::Proyecto_Ferreteria.Properties.Resources.MADERA;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.butcancelar);
@@ -51,7 +54,9 @@ namespace Proyecto_Ferreteria
             // 
             // dataGridView1
             // 
-            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(88, 31);
             this.dataGridView1.Name = "dataGridView1";
@@ -62,7 +67,7 @@ namespace Proyecto_Ferreteria
             // 
             // butcancelar
             // 
-            this.butcancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.butcancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.butcancelar.Font = new System.Drawing.Font("Oswald", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butcancelar.Location = new System.Drawing.Point(481, 378);
             this.butcancelar.Name = "butcancelar";
@@ -70,11 +75,10 @@ namespace Proyecto_Ferreteria
             this.butcancelar.TabIndex = 1;
             this.butcancelar.Text = "CANCELAR";
             this.butcancelar.UseVisualStyleBackColor = true;
-            this.butcancelar.Click += new System.EventHandler(this.butcancelar_Click);
             // 
             // butconfirmar
             // 
-            this.butconfirmar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.butconfirmar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.butconfirmar.Font = new System.Drawing.Font("Oswald", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butconfirmar.Location = new System.Drawing.Point(121, 378);
             this.butconfirmar.Name = "butconfirmar";
@@ -89,6 +93,7 @@ namespace Proyecto_Ferreteria
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Compra";
             this.Text = "Compra";
             this.panel1.ResumeLayout(false);

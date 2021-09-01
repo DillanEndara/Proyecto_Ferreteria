@@ -69,9 +69,9 @@ namespace Proyecto_Ferreteria
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(0, 12);
+            this.panel1.Location = new System.Drawing.Point(0, -1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(824, 499);
+            this.panel1.Size = new System.Drawing.Size(824, 512);
             this.panel1.TabIndex = 0;
             // 
             // comboBox1
@@ -79,7 +79,7 @@ namespace Proyecto_Ferreteria
             this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(199, 281);
+            this.comboBox1.Location = new System.Drawing.Point(199, 288);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(202, 33);
             this.comboBox1.TabIndex = 27;
@@ -91,7 +91,7 @@ namespace Proyecto_Ferreteria
             this.label7.BackColor = System.Drawing.Color.White;
             this.label7.Font = new System.Drawing.Font("Oswald", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(55, 280);
+            this.label7.Location = new System.Drawing.Point(55, 287);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(96, 30);
             this.label7.TabIndex = 26;
@@ -101,7 +101,7 @@ namespace Proyecto_Ferreteria
             // 
             this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox4.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(577, 213);
+            this.textBox4.Location = new System.Drawing.Point(577, 220);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(202, 29);
             this.textBox4.TabIndex = 25;
@@ -110,7 +110,7 @@ namespace Proyecto_Ferreteria
             // 
             this.textBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox5.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(577, 150);
+            this.textBox5.Location = new System.Drawing.Point(577, 157);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(202, 29);
             this.textBox5.TabIndex = 24;
@@ -119,7 +119,7 @@ namespace Proyecto_Ferreteria
             // 
             this.textBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox6.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(199, 213);
+            this.textBox6.Location = new System.Drawing.Point(199, 220);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(202, 29);
             this.textBox6.TabIndex = 23;
@@ -128,7 +128,7 @@ namespace Proyecto_Ferreteria
             // 
             this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox3.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(199, 150);
+            this.textBox3.Location = new System.Drawing.Point(199, 157);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(202, 29);
             this.textBox3.TabIndex = 22;
@@ -137,7 +137,7 @@ namespace Proyecto_Ferreteria
             // 
             this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox1.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(577, 89);
+            this.textBox1.Location = new System.Drawing.Point(577, 96);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(202, 29);
             this.textBox1.TabIndex = 21;
@@ -146,7 +146,7 @@ namespace Proyecto_Ferreteria
             // 
             this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox2.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(199, 86);
+            this.textBox2.Location = new System.Drawing.Point(199, 93);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(202, 29);
             this.textBox2.TabIndex = 20;
@@ -155,7 +155,7 @@ namespace Proyecto_Ferreteria
             // 
             this.butagregar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.butagregar.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butagregar.Location = new System.Drawing.Point(139, 367);
+            this.butagregar.Location = new System.Drawing.Point(139, 374);
             this.butagregar.Name = "butagregar";
             this.butagregar.Size = new System.Drawing.Size(137, 41);
             this.butagregar.TabIndex = 19;
@@ -166,7 +166,7 @@ namespace Proyecto_Ferreteria
             // 
             this.butsalir.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.butsalir.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butsalir.Location = new System.Drawing.Point(506, 367);
+            this.butsalir.Location = new System.Drawing.Point(506, 374);
             this.butsalir.Name = "butsalir";
             this.butsalir.Size = new System.Drawing.Size(137, 41);
             this.butsalir.TabIndex = 10;
@@ -181,7 +181,7 @@ namespace Proyecto_Ferreteria
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Font = new System.Drawing.Font("Oswald", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(55, 147);
+            this.label4.Location = new System.Drawing.Point(55, 154);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(95, 30);
             this.label4.TabIndex = 8;
@@ -194,7 +194,7 @@ namespace Proyecto_Ferreteria
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("Oswald", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(452, 147);
+            this.label5.Location = new System.Drawing.Point(452, 154);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(113, 30);
             this.label5.TabIndex = 7;
@@ -207,7 +207,7 @@ namespace Proyecto_Ferreteria
             this.label6.BackColor = System.Drawing.Color.White;
             this.label6.Font = new System.Drawing.Font("Oswald", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(452, 210);
+            this.label6.Location = new System.Drawing.Point(452, 217);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(114, 30);
             this.label6.TabIndex = 6;
@@ -220,7 +220,7 @@ namespace Proyecto_Ferreteria
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Oswald", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(55, 210);
+            this.label3.Location = new System.Drawing.Point(55, 217);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(96, 30);
             this.label3.TabIndex = 5;
@@ -233,7 +233,7 @@ namespace Proyecto_Ferreteria
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Oswald", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(452, 83);
+            this.label2.Location = new System.Drawing.Point(452, 90);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(113, 30);
             this.label2.TabIndex = 4;
@@ -246,7 +246,7 @@ namespace Proyecto_Ferreteria
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Oswald", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(55, 83);
+            this.label1.Location = new System.Drawing.Point(55, 90);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(95, 30);
             this.label1.TabIndex = 3;
@@ -258,6 +258,7 @@ namespace Proyecto_Ferreteria
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(823, 509);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Registro";
             this.Text = "Registro";
             this.panel1.ResumeLayout(false);
