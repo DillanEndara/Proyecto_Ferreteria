@@ -63,6 +63,7 @@ namespace Proyecto_Ferreteria
             this.txt_password.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_password.Location = new System.Drawing.Point(239, 251);
             this.txt_password.Name = "txt_password";
+            this.txt_password.PasswordChar = '*';
             this.txt_password.Size = new System.Drawing.Size(202, 29);
             this.txt_password.TabIndex = 4;
             // 

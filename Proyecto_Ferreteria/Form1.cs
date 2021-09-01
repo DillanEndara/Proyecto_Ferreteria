@@ -44,7 +44,26 @@ namespace Proyecto_Ferreteria
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            btninicio_Click(null, e);
+            //admin
+            if(Inicio.rol == "1")
+            {
+                btninicio_Click(null, e);
+                btninicio.Enabled = true;
+                btnadm.Enabled = true;
+                btncliente.Enabled = true;
+                btncompra.Enabled = true;
+                btnpagos.Enabled = true;
+            }
+            else if (Inicio.rol == "2")
+            {
+                btninicio_Click(null, e);
+                btninicio.Enabled = true;
+                btnadm.Enabled = false;
+                btncliente.Enabled = true;
+                btncompra.Enabled = true;
+                btnpagos.Enabled = true; 
+            }
+            
         }
 
         // mover la ventana

@@ -1,20 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Capa_Datos;
+using Capa_Entidad;
 
 namespace Capa_Negocio
 {
     public class CNUsuario
     {
-        private CDUsuario objetoCD = new CDUsuario();
-
-        public int logeo(string correo, string pass)
+        CDUsuario objd = new CDUsuario();
+        public DataTable CNusuario(CEUsuario obje) 
         {
-            int rol = objetoCD.login(correo, pass);
-            return rol;
+            return objd.CDusuario(obje);
+
         }
     }
 }

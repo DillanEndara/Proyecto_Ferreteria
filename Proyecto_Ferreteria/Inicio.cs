@@ -8,7 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
-//using Capa_Negocio;
+using Capa_Negocio;
+using Capa_Entidad;
 
 namespace Proyecto_Ferreteria
 {
@@ -36,101 +37,43 @@ namespace Proyecto_Ferreteria
             }
             else
             {
-                logear(txt_usuario.Text, txt_password.Text);
+                logueo();
             }
         }
 
-        private void logear(string usuario, string contraseña)
+        CEUsuario objeuser = new CEUsuario();
+        CNUsuario objnuser = new CNUsuario();
+        Form1 frm1 = new Form1();
+        public static string usuario_nombre;
+        public static string rol;
+
+        private void logueo()
         {
-             /*con.Open();
-
-            //Seleccionar el nombre y tipo de usuario desde la tabla y muestra
-            //el usuario y la contraseña siempre y cuando sean iguales 
-            SqlCommand cmd = new SqlCommand("select usu_nombre, usu_password from Tbl_Usuario where usu_nomlogin = @usu", con);
-            cmd.Parameters.AddWithValue("usu", usuario);
-
-            //traduce el codigo desde sql a visual va a comparar lo ingresado con las tablas
-            SqlDataAdapter sda = new SqlDataAdapter(cmd);
-
-            //muestra la tabla y permite interactuar
             DataTable dt = new DataTable();
-            sda.Fill(dt);
-
-            con.Close();
-            try
+            objeuser.usuario = txt_usuario.Text;
+            objeuser.clave = txt_password.Text;
+            dt = objnuser.CNusuario(objeuser);
+            if (dt.Rows.Count>0)
             {
+                MessageBox.Show("Bienvenido   "+dt.Rows[0][0].ToString(), "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                usuario_nombre = dt.Rows[0][0].ToString();
+                rol = dt.Rows[0][1].ToString();
 
-                if (dt.Rows.Count == 1)
-                {
+                frm1.ShowDialog();
 
-                    string encrypt = "HASHBYTES('MD5','" + contraseña + "')";
-                    con.Open();
+                Inicio login = new Inicio();
+                login.ShowDialog();
+                if (login.DialogResult == DialogResult.OK)
+                    Application.Run(new Form1());
 
-                    //Verificación a través de una consulta para ver los datos del usuario
-                    SqlCommand cmd1 = new SqlCommand("select usu_nombre ,tusu_id  from Tbl_Usuario" +
-                        " where usu_nomlogin = @us and usu_password = " + encrypt, con);
+                txt_password.Clear();
+                txt_usuario.Clear();
 
-                    cmd1.Parameters.AddWithValue("us", usuario);
-
-                    //Traduce el codigo desde sql a visual para comparar lo ingresado con las tablas
-                    SqlDataAdapter sda1 = new SqlDataAdapter(cmd1);
-
-                    //Muestra la tabla y permite interactuar
-                    DataTable dt1 = new DataTable();
-                    sda1.Fill(dt1);
-
-                    //Termina la conexion 
-                    con.Close();
-
-                    //Validar el usuario
-                    if (dt1.Rows.Count == 1)
-                    {
-                        this.Hide();
-                        int rol = objetoCN.logeo(txt_usuario.Text, txt_password.Text);
-                        if (rol == 1)
-                        {
-                                this.Hide();
-                                new Form1().ShowDialog();
-                                this.Close();
-                        }
-                        else if (rol == 2)
-                        {
-                                this.Hide();
-                                new Form1().ShowDialog();
-                                this.Close();
-                        }
-                        this.Close();
-
-                    }
-                    else
-                    {
-                        MessageBox.Show("Contraseña incorrecta!\n");
-                        lbl_intentos.Text = contador.ToString();
-                        contador--;
-                        if (lbl_intentos.Text == "0")
-                        {
-                            //Bloqueo del usuario en la Base de Datos
-                            con.Open();
-                            SqlCommand cmd3 = new SqlCommand("UPDATE Tbl_Usuario SET usu_estado = 'I'  WHERE usu_nomlogin ='" + usuario + "'", con);
-                            cmd3.ExecuteNonQuery();
-                            con.Close();
-
-                            MessageBox.Show("Límite de intentos superado \n Usuario Bloqueado");
-                            btningresar.Enabled = false;
-                        }
-                    }
-
-                }
-                else
-                {
-                    MessageBox.Show("Usuario incorrecto (No existe)");
-                }
             }
-            catch (Exception)
+            else
             {
-
-                throw;
-            }*/
+                MessageBox.Show("Usuario o Contraseña Incorrecta", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
 
         }
 
