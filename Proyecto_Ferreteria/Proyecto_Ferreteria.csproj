@@ -165,5 +165,11 @@
     <Content Include="Resources\ferreteria.jpg" />
     <Content Include="Resources\onoff.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Capa_Negocio\Capa_Negocio.csproj">
+      <Project>{D25871C8-B4C7-412A-BB59-52336D1C9126}</Project>
+      <Name>Capa_Negocio</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

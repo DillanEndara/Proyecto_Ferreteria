@@ -42,6 +42,7 @@ namespace Proyecto_Ferreteria
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.lblContador = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.BarraTitulo.SuspendLayout();
@@ -54,7 +55,7 @@ namespace Proyecto_Ferreteria
             this.txt_usuario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_usuario.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_usuario.Location = new System.Drawing.Point(179, 148);
-            this.txt_usuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_usuario.Margin = new System.Windows.Forms.Padding(2);
             this.txt_usuario.Name = "txt_usuario";
             this.txt_usuario.Size = new System.Drawing.Size(152, 25);
             this.txt_usuario.TabIndex = 3;
@@ -64,9 +65,9 @@ namespace Proyecto_Ferreteria
             this.txt_password.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_password.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_password.Location = new System.Drawing.Point(179, 204);
-            this.txt_password.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_password.Margin = new System.Windows.Forms.Padding(2);
             this.txt_password.Name = "txt_password";
-            this.txt_password.Size = new System.Drawing.Size(202, 29);
+            this.txt_password.Size = new System.Drawing.Size(202, 25);
             this.txt_password.TabIndex = 4;
             // 
             // butingreso
@@ -78,7 +79,7 @@ namespace Proyecto_Ferreteria
             this.butingreso.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butingreso.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.butingreso.Location = new System.Drawing.Point(150, 255);
-            this.butingreso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.butingreso.Margin = new System.Windows.Forms.Padding(2);
             this.butingreso.Name = "butingreso";
             this.butingreso.Size = new System.Drawing.Size(122, 40);
             this.butingreso.TabIndex = 6;
@@ -93,7 +94,7 @@ namespace Proyecto_Ferreteria
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::Proyecto_Ferreteria.Properties.Resources.Imagenes_Candado_PNG;
             this.pictureBox2.Location = new System.Drawing.Point(104, 188);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(40, 40);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -106,7 +107,7 @@ namespace Proyecto_Ferreteria
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::Proyecto_Ferreteria.Properties.Resources.usuario;
             this.pictureBox1.Location = new System.Drawing.Point(104, 132);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(40, 40);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -203,6 +204,14 @@ namespace Proyecto_Ferreteria
             this.lblContador.Size = new System.Drawing.Size(0, 13);
             this.lblContador.TabIndex = 13;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(123, 318);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 13);
+            this.label3.TabIndex = 14;
+            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -210,6 +219,7 @@ namespace Proyecto_Ferreteria
             this.BackgroundImage = global::Proyecto_Ferreteria.Properties.Resources.Inicio;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(412, 379);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.lblContador);
             this.Controls.Add(this.BarraTitulo);
             this.Controls.Add(this.linkregistro);
@@ -221,7 +231,7 @@ namespace Proyecto_Ferreteria
             this.Controls.Add(this.txt_password);
             this.Controls.Add(this.txt_usuario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimizeBox = false;
             this.Name = "Inicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -250,5 +260,6 @@ namespace Proyecto_Ferreteria
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.Label lblContador;
+        private System.Windows.Forms.Label label3;
     }
 }
