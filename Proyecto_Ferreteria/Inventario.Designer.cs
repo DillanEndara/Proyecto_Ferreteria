@@ -30,7 +30,7 @@ namespace Proyecto_Ferreteria
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cmbcan = new System.Windows.Forms.ComboBox();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.label3 = new System.Windows.Forms.Label();
             this.btnfin = new System.Windows.Forms.Button();
@@ -42,6 +42,7 @@ namespace Proyecto_Ferreteria
             this.cmbpro = new System.Windows.Forms.ComboBox();
             this.cmbcat = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,7 +53,7 @@ namespace Proyecto_Ferreteria
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackgroundImage = global::Proyecto_Ferreteria.Properties.Resources.MADERA;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.cmbcan);
+            this.panel1.Controls.Add(this.numericUpDown1);
             this.panel1.Controls.Add(this.splitter1);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.btnfin);
@@ -63,27 +64,36 @@ namespace Proyecto_Ferreteria
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.cmbpro);
             this.panel1.Controls.Add(this.cmbcat);
-            this.panel1.Location = new System.Drawing.Point(-8, 0);
+            this.panel1.Location = new System.Drawing.Point(-6, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(863, 491);
+            this.panel1.Size = new System.Drawing.Size(647, 399);
             this.panel1.TabIndex = 0;
             // 
-            // cmbcan
+            // numericUpDown1
             // 
-            this.cmbcan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbcan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbcan.FormattingEnabled = true;
-            this.cmbcan.Location = new System.Drawing.Point(239, 179);
-            this.cmbcan.Name = "cmbcan";
-            this.cmbcan.Size = new System.Drawing.Size(158, 33);
-            this.cmbcan.TabIndex = 11;
+            this.numericUpDown1.Location = new System.Drawing.Point(179, 148);
+            this.numericUpDown1.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown1.TabIndex = 13;
+            this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // splitter1
             // 
             this.splitter1.Location = new System.Drawing.Point(0, 0);
+            this.splitter1.Margin = new System.Windows.Forms.Padding(2);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(8, 491);
+            this.splitter1.Size = new System.Drawing.Size(6, 399);
             this.splitter1.TabIndex = 10;
             this.splitter1.TabStop = false;
             // 
@@ -91,11 +101,12 @@ namespace Proyecto_Ferreteria
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Oswald", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(62, 179);
+            this.label3.Location = new System.Drawing.Point(46, 145);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 30);
+            this.label3.Size = new System.Drawing.Size(81, 20);
             this.label3.TabIndex = 9;
             this.label3.Text = "Cantidad";
             // 
@@ -103,9 +114,10 @@ namespace Proyecto_Ferreteria
             // 
             this.btnfin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnfin.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnfin.Location = new System.Drawing.Point(565, 178);
+            this.btnfin.Location = new System.Drawing.Point(424, 145);
+            this.btnfin.Margin = new System.Windows.Forms.Padding(2);
             this.btnfin.Name = "btnfin";
-            this.btnfin.Size = new System.Drawing.Size(137, 41);
+            this.btnfin.Size = new System.Drawing.Size(103, 33);
             this.btnfin.TabIndex = 7;
             this.btnfin.Text = "FINALIZAR";
             this.btnfin.UseVisualStyleBackColor = true;
@@ -114,9 +126,10 @@ namespace Proyecto_Ferreteria
             // 
             this.btneliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btneliminar.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btneliminar.Location = new System.Drawing.Point(565, 110);
+            this.btneliminar.Location = new System.Drawing.Point(424, 89);
+            this.btneliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btneliminar.Name = "btneliminar";
-            this.btneliminar.Size = new System.Drawing.Size(137, 41);
+            this.btneliminar.Size = new System.Drawing.Size(103, 33);
             this.btneliminar.TabIndex = 6;
             this.btneliminar.Text = "ELIMINAR";
             this.btneliminar.UseVisualStyleBackColor = true;
@@ -125,12 +138,14 @@ namespace Proyecto_Ferreteria
             // 
             this.btnagregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnagregar.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnagregar.Location = new System.Drawing.Point(565, 39);
+            this.btnagregar.Location = new System.Drawing.Point(424, 32);
+            this.btnagregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnagregar.Name = "btnagregar";
-            this.btnagregar.Size = new System.Drawing.Size(137, 41);
+            this.btnagregar.Size = new System.Drawing.Size(103, 33);
             this.btnagregar.TabIndex = 5;
             this.btnagregar.Text = "AGREGAR";
             this.btnagregar.UseVisualStyleBackColor = true;
+            this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
             // 
             // dataGridView1
             // 
@@ -138,22 +153,24 @@ namespace Proyecto_Ferreteria
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(61, 238);
+            this.dataGridView1.Location = new System.Drawing.Point(46, 193);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(742, 217);
+            this.dataGridView1.Size = new System.Drawing.Size(556, 176);
             this.dataGridView1.TabIndex = 4;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Oswald", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(56, 110);
+            this.label2.Location = new System.Drawing.Point(42, 89);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 30);
+            this.label2.Size = new System.Drawing.Size(81, 20);
             this.label2.TabIndex = 3;
             this.label2.Text = "Producto";
             // 
@@ -161,11 +178,12 @@ namespace Proyecto_Ferreteria
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Oswald", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(56, 47);
+            this.label1.Location = new System.Drawing.Point(42, 38);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 30);
+            this.label1.Size = new System.Drawing.Size(87, 20);
             this.label1.TabIndex = 2;
             this.label1.Text = "Categoría";
             // 
@@ -175,9 +193,10 @@ namespace Proyecto_Ferreteria
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbpro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbpro.FormattingEnabled = true;
-            this.cmbpro.Location = new System.Drawing.Point(239, 110);
+            this.cmbpro.Location = new System.Drawing.Point(179, 89);
+            this.cmbpro.Margin = new System.Windows.Forms.Padding(2);
             this.cmbpro.Name = "cmbpro";
-            this.cmbpro.Size = new System.Drawing.Size(158, 33);
+            this.cmbpro.Size = new System.Drawing.Size(120, 28);
             this.cmbpro.TabIndex = 1;
             // 
             // cmbcat
@@ -186,22 +205,27 @@ namespace Proyecto_Ferreteria
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbcat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbcat.FormattingEnabled = true;
-            this.cmbcat.Location = new System.Drawing.Point(239, 48);
+            this.cmbcat.Location = new System.Drawing.Point(179, 39);
+            this.cmbcat.Margin = new System.Windows.Forms.Padding(2);
             this.cmbcat.Name = "cmbcat";
-            this.cmbcat.Size = new System.Drawing.Size(158, 33);
+            this.cmbcat.Size = new System.Drawing.Size(120, 28);
             this.cmbcat.TabIndex = 0;
+            this.cmbcat.SelectedIndexChanged += new System.EventHandler(this.cmbcat_SelectedIndexChanged);
             // 
             // Inventario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(852, 491);
+            this.ClientSize = new System.Drawing.Size(639, 399);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Inventario";
             this.Text = "Inventario";
+            this.Load += new System.EventHandler(this.Inventario_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -218,8 +242,8 @@ namespace Proyecto_Ferreteria
         private System.Windows.Forms.Button btnfin;
         private System.Windows.Forms.Button btneliminar;
         private System.Windows.Forms.Button btnagregar;
-        private System.Windows.Forms.ComboBox cmbcan;
         private System.Windows.Forms.Splitter splitter1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
     }
 }

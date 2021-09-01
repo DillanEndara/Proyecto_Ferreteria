@@ -15,7 +15,7 @@ namespace Capa_Negocio
         public DataTable listarProductos()
         {
             DataTable tabla = new DataTable();
-            tabla = objetoCD.mostrarEstudiante();
+            tabla = objetoCD.mostrarProducto();
             return tabla;
         }
 
@@ -39,6 +39,13 @@ namespace Capa_Negocio
             DataTable tableC = new DataTable();
             tableC = objetoCD.listarCat();
             return tableC;
+        }
+
+        public DataTable listarCmb(string id)
+        {
+            DataTable tableP = new DataTable();
+            tableP = objetoCD.listarCmb(Convert.ToInt32(id));
+            return tableP;
         }
     }
 }

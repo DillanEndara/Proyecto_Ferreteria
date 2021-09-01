@@ -12,11 +12,13 @@ namespace CapaDatos
     public class CDProducto
     {
         private CDConexion con = new CDConexion();
+        private SqlConnection conex = new SqlConnection("Data Source=VICTORIA;Initial Catalog=dbFerreteria;Integrated Security=True");
         DataTable tabla = new DataTable();
         SqlDataReader leer;
+        SqlDataReader leerP;
         SqlCommand cmd = new SqlCommand();
 
-        public DataTable mostrarEstudiante()
+        public DataTable mostrarProducto()
         {
             //procedimientos almacenados
             cmd.Connection = con.abrirCon();
@@ -83,6 +85,32 @@ namespace CapaDatos
             con.cerrarCon();
 
             return tabla;
+        }
+
+        public DataTable listarCmbProd(int id)
+        {
+            DataTable data = new DataTable();
+            cmd.Connection = con.abrirCon();
+            cmd.CommandText = "ListarCmbProd";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@id", id);
+            leerP = cmd.ExecuteReader();
+            data.Load(leerP);
+            con.cerrarCon();
+
+            return data;
+        }
+
+        public DataTable listarCmb(int id)
+        {
+            con.abrirCon();
+            SqlCommand command = new SqlCommand("Select idPro, nombrePro, stockPro, precioVentaPro from tblProducto where idCat = @id", conex);
+            command.Parameters.AddWithValue("@id", id);
+            SqlDataAdapter da = new SqlDataAdapter(command);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+            con.cerrarCon();
         }
     }
 }
