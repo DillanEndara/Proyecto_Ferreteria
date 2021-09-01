@@ -20,11 +20,11 @@ namespace Capa_Negocio
             table = objetoCD.login(correo, pass);
             if(table.Rows.Count > 0)
             {
-                if (table.Rows[0][4].ToString() == "1")
+                if (table.Rows[0][5].ToString() == "1")
                 {
                     rol = 1;
                 }
-                else if (table.Rows[0][4].ToString() == "2")
+                else if (table.Rows[0][5].ToString() == "2")
                 {
                     rol = 2;
                 }
@@ -37,9 +37,16 @@ namespace Capa_Negocio
             }  
         }
 
-        public void registrar(string nombre, string apellido, string correo, int rol, string pass, string ced, int telf)
+        public void registrar(string nombre, string apellido, string correo, string rol, string pass, string ced, string telf)
         {
-            objetoCD.crearUuario(nombre, apellido, correo, rol, pass, ced, telf);
+            objetoCD.crearUuario(nombre, apellido, correo, Convert.ToInt32(rol), pass, ced, Convert.ToInt32(telf));
+        }
+
+        public DataTable listarRol()
+        {
+            DataTable tableC = new DataTable();
+            tableC = objetoCD.listarRol();
+            return tableC;
         }
     }
 }

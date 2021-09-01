@@ -166,6 +166,10 @@
     <Content Include="Resources\onoff.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CapaDatos\Capa_Datos.csproj">
+      <Project>{E11E2716-CC65-4716-8031-4A31014289B1}</Project>
+      <Name>Capa_Datos</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Capa_Negocio\Capa_Negocio.csproj">
       <Project>{D25871C8-B4C7-412A-BB59-52336D1C9126}</Project>
       <Name>Capa_Negocio</Name>

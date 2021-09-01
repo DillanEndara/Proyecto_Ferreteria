@@ -46,16 +46,17 @@ namespace Proyecto_Ferreteria
         {
             int rol;
             rol = objetoCN.logeo(usuario, contraseña);
+            Form1 fr = new Form1(rol);
             if (rol == 1)
             {
                 this.Hide();
-                new Registro().ShowDialog();
+                new Form1().ShowDialog();
                 this.Close();
             }
             else if (rol == 2)
             {
                 this.Hide();
-                new Registro().ShowDialog();
+                new Administrador().ShowDialog();
                 this.Close();
             }
             else

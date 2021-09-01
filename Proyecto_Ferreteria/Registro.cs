@@ -28,8 +28,23 @@ namespace Proyecto_Ferreteria
 
         private void butagregar_Click(object sender, EventArgs e)
         {
-            objetoCN.registrar(textBox2.Text, textBox3.Text, textBox6.Text,Convert.ToInt32(comboBox1.Text) , textBox5.Text, textBox1.Text, Convert.ToInt32(textBox4.Text));
-            MessageBox.Show("Usuario registrado correctamente");
+            try
+            {
+                objetoCN.registrar(textBox2.Text, textBox3.Text, textBox6.Text, comboBox1.SelectedValue.ToString(), textBox5.Text, textBox1.Text, textBox4.Text);
+                MessageBox.Show("Usuario registrado correctamente");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("No se pudo registrar el usuario");
+                throw;
+            }
+        }
+
+        private void Registro_Load(object sender, EventArgs e)
+        {
+            comboBox1.DisplayMember = "nombreRol";
+            comboBox1.ValueMember = "idRol";
+            comboBox1.DataSource = objetoCN.listarRol();
         }
     }
 }

@@ -14,9 +14,15 @@ namespace Proyecto_Ferreteria
 {
     public partial class Form1 : Form
     {
+        static int idForm;
         public Form1()
         {
             InitializeComponent();
+        }
+
+        public Form1(int id)
+        {
+            idForm = id;
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -45,25 +51,25 @@ namespace Proyecto_Ferreteria
         private void Form1_Load(object sender, EventArgs e)
         {
             //admin
-            //if(Inicio.rol == "1")
-            //{
-            //    btninicio_Click(null, e);
-            //    btninicio.Enabled = true;
-            //    btnadm.Enabled = true;
-            //    btncliente.Enabled = true;
-            //    btncompra.Enabled = true;
-            //    btnpagos.Enabled = true;
-            //}
-            //else if (Inicio.rol == "2")
-            //{
-            //    btninicio_Click(null, e);
-            //    btninicio.Enabled = true;
-            //    btnadm.Enabled = false;
-            //    btncliente.Enabled = true;
-            //    btncompra.Enabled = true;
-            //    btnpagos.Enabled = true; 
-            //}
-            
+            if (idForm == 1)
+            {
+                btninicio_Click(null, e);
+                btninicio.Enabled = true;
+                btnadm.Enabled = true;
+                btncliente.Enabled = true;
+                btncompra.Enabled = true;
+                btnpagos.Enabled = true;
+            }
+            else if (idForm == 2)
+            {
+                btninicio_Click(null, e);
+                btninicio.Enabled = true;
+                btnadm.Enabled = false;
+                btncliente.Enabled = true;
+                btncompra.Enabled = true;
+                btnpagos.Enabled = true;
+            }
+
         }
 
         // mover la ventana

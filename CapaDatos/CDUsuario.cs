@@ -14,6 +14,8 @@ namespace Capa_Datos
     {
         private CDConexion con = new CDConexion();
         SqlCommand cmd = new SqlCommand();
+        SqlDataReader leer;
+        DataTable tabla = new DataTable();
 
         public DataTable login(string correo, string pass)
         {
@@ -45,6 +47,18 @@ namespace Capa_Datos
             cmd.ExecuteNonQuery();
             cmd.Parameters.Clear();
             cmd.Connection = con.cerrarCon();
+        }
+
+        public DataTable listarRol()
+        {
+            cmd.Connection = con.abrirCon();
+            cmd.CommandText = "ListarRol";
+            cmd.CommandType = CommandType.StoredProcedure;
+            leer = cmd.ExecuteReader();
+            tabla.Load(leer);
+            con.cerrarCon();
+
+            return tabla;
         }
     }
 }

@@ -44,6 +44,7 @@ namespace Proyecto_Ferreteria
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -55,6 +56,7 @@ namespace Proyecto_Ferreteria
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackgroundImage = global::Proyecto_Ferreteria.Properties.Resources.inventario;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.buteditar);
@@ -70,7 +72,7 @@ namespace Proyecto_Ferreteria
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(716, 439);
             this.panel1.TabIndex = 0;
@@ -82,7 +84,7 @@ namespace Proyecto_Ferreteria
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(148, 28);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(296, 28);
             this.comboBox1.TabIndex = 25;
@@ -94,19 +96,20 @@ namespace Proyecto_Ferreteria
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(36, 258);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(620, 148);
             this.dataGridView1.TabIndex = 24;
+            this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
             // 
             // buteditar
             // 
             this.buteditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buteditar.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buteditar.Location = new System.Drawing.Point(512, 113);
-            this.buteditar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buteditar.Margin = new System.Windows.Forms.Padding(2);
             this.buteditar.Name = "buteditar";
             this.buteditar.Size = new System.Drawing.Size(103, 33);
             this.buteditar.TabIndex = 20;
@@ -119,7 +122,7 @@ namespace Proyecto_Ferreteria
             this.buteliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buteliminar.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buteliminar.Location = new System.Drawing.Point(512, 205);
-            this.buteliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buteliminar.Margin = new System.Windows.Forms.Padding(2);
             this.buteliminar.Name = "buteliminar";
             this.buteliminar.Size = new System.Drawing.Size(103, 33);
             this.buteliminar.TabIndex = 19;
@@ -132,7 +135,7 @@ namespace Proyecto_Ferreteria
             this.butagregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.butagregar.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butagregar.Location = new System.Drawing.Point(512, 25);
-            this.butagregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.butagregar.Margin = new System.Windows.Forms.Padding(2);
             this.butagregar.Name = "butagregar";
             this.butagregar.Size = new System.Drawing.Size(103, 33);
             this.butagregar.TabIndex = 18;
@@ -146,7 +149,7 @@ namespace Proyecto_Ferreteria
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox5.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox5.Location = new System.Drawing.Point(148, 207);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(296, 25);
             this.textBox5.TabIndex = 17;
@@ -157,7 +160,7 @@ namespace Proyecto_Ferreteria
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox4.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox4.Location = new System.Drawing.Point(148, 163);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(296, 25);
             this.textBox4.TabIndex = 16;
@@ -168,7 +171,7 @@ namespace Proyecto_Ferreteria
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox3.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.Location = new System.Drawing.Point(148, 118);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(296, 25);
             this.textBox3.TabIndex = 15;
@@ -179,7 +182,7 @@ namespace Proyecto_Ferreteria
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox2.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(148, 76);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(296, 25);
             this.textBox2.TabIndex = 14;
@@ -244,6 +247,13 @@ namespace Proyecto_Ferreteria
             this.label1.TabIndex = 8;
             this.label1.Text = "Categoría";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(148, 13);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(296, 20);
+            this.textBox1.TabIndex = 26;
+            // 
             // Administrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -251,9 +261,10 @@ namespace Proyecto_Ferreteria
             this.ClientSize = new System.Drawing.Size(716, 439);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Administrador";
             this.Text = "Administrador";
+            this.Load += new System.EventHandler(this.Administrador_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -278,5 +289,6 @@ namespace Proyecto_Ferreteria
         private System.Windows.Forms.Button buteliminar;
         private System.Windows.Forms.Button butagregar;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
