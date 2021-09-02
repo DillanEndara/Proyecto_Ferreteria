@@ -39,7 +39,45 @@ namespace Proyecto_Ferreteria
             }
             else
             {
-                logear(txt_usuario.Text, txt_password.Text);
+                int rol;
+                rol = objetoCN.logeo(txt_usuario.Text, txt_password.Text);
+                Form1 fr = new Form1(rol);
+                if (rol == 1)
+                {
+                    int idUs;
+                    DataTable findId = new DataTable();
+                    findId = objetoCN.encontrarId(txt_usuario.Text, txt_password.Text);
+                    idUs = Convert.ToInt32(findId.Rows[0][0].ToString());
+                    Inventario inv = new Inventario(idUs);
+                    Compra comp = new Compra(idUs);
+                    this.Hide();
+                    new Form1().ShowDialog();
+                    this.Close();
+                }
+                else if (rol == 2)
+                {
+                    int idUs;
+                    DataTable findId = new DataTable();
+                    findId = objetoCN.encontrarId(txt_usuario.Text, txt_password.Text);
+                    idUs = Convert.ToInt32(findId.Rows[0][0].ToString());
+                    Inventario inv = new Inventario(idUs);
+                    Compra comp = new Compra(idUs);
+                    this.Hide();
+                    new Form1().ShowDialog();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Informacion Incorrecta");
+                    contador--;
+                    lblContador.Text = contador.ToString();
+                    if (contador == 0)
+                    {
+                        MessageBox.Show("Cantidad de intentos excedida");
+                        this.Close();
+                    }
+                }
+                //logear(txt_usuario.Text, txt_password.Text);
             }
         }
 
@@ -53,65 +91,36 @@ namespace Proyecto_Ferreteria
         private void logear(string usuario, string contraseña)
         {
             DataTable dt = new DataTable();
-            objeuser.correo = txt_usuario.Text;
-            objeuser.pass = txt_password.Text;
+            //objeuser.correo = txt_usuario.Text;
+            //objeuser.pass = txt_password.Text;
 
-            dt = objnuser.CNusuario(objeuser);
-            if (dt.Rows.Count > 0)
-            {
-                MessageBox.Show("Bienvenido ", "Mensaje ", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                correo = dt.Rows[0][1].ToString();
-                rol = dt.Rows[0][0].ToString();
+            //dt = objnuser.CNusuario(objeuser);
+            //if (dt.Rows.Count > 0)
+            //{
+            //    MessageBox.Show("Bienvenido ", "Mensaje ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    correo = dt.Rows[0][1].ToString();
+            //    rol = dt.Rows[0][0].ToString();
 
-                frm1.ShowDialog();
-                Inicio login = new Inicio();
-                login.ShowDialog();
-                if (login.DialogResult == DialogResult.OK)
-                    Application.Run(new Inicio());
-                txt_usuario.Clear();
-                txt_password.Clear();
+            //    frm1.ShowDialog();
+            //    Inicio login = new Inicio();
+            //    login.ShowDialog();
+            //    if (login.DialogResult == DialogResult.OK)
+            //        Application.Run(new Inicio());
+            //    txt_usuario.Clear();
+            //    txt_password.Clear();
 
-            }
-            else
-            {
-                MessageBox.Show("Informacion Incorrecta", "Mensaje", MessageBoxButtons.OK,MessageBoxIcon.Information);
-                contador--;
-                lblContador.Text = contador.ToString();
-                if (contador == 0)
-                {
-                    MessageBox.Show("Cantidad de intentos excedida");
-                    this.Close();
-                }
-            }
-
-
-
-            /*int rol;
-            rol = objetoCN.logeo(usuario, contraseña);
-            Form1 fr = new Form1(rol);
-            if (rol == 1)
-            {
-                this.Hide();
-                new Form1().ShowDialog();
-                this.Close();
-            }
-            else if (rol == 2)
-            {
-                this.Hide();
-                new Administrador().ShowDialog();
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Informacion Incorrecta");
-                contador--;
-                lblContador.Text = contador.ToString();
-                if (contador == 0)
-                {
-                    MessageBox.Show("Cantidad de intentos excedida");
-                    this.Close();
-                }
-            }*/
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Informacion Incorrecta", "Mensaje", MessageBoxButtons.OK,MessageBoxIcon.Information);
+            //    contador--;
+            //    lblContador.Text = contador.ToString();
+            //    if (contador == 0)
+            //    {
+            //        MessageBox.Show("Cantidad de intentos excedida");
+            //        this.Close();
+            //    }
+            //}
         }
 
         private void linkregistro_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

@@ -15,7 +15,6 @@ namespace CapaDatos
         private SqlConnection conex = new SqlConnection("Data Source=VICTORIA;Initial Catalog=dbFerreteria;Integrated Security=True");
         DataTable tabla = new DataTable();
         SqlDataReader leer;
-        SqlDataReader leerP;
         SqlCommand cmd = new SqlCommand();
 
         public DataTable mostrarProducto()
@@ -87,18 +86,20 @@ namespace CapaDatos
             return tabla;
         }
 
-        public DataTable listarCmbProd(int id)
+        public DataTable datosProd(int id)
         {
-            DataTable data = new DataTable();
+            DataTable datos = new DataTable();
+            SqlDataReader lee;
             cmd.Connection = con.abrirCon();
             cmd.CommandText = "ListarCmbProd";
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@id", id);
-            leerP = cmd.ExecuteReader();
-            data.Load(leerP);
+            lee = cmd.ExecuteReader();
+            cmd.Parameters.Clear();
+            datos.Load(lee);
             con.cerrarCon();
 
-            return data;
+            return datos;
         }
 
         public DataTable listarCmb(int id)
@@ -109,7 +110,31 @@ namespace CapaDatos
             SqlDataAdapter da = new SqlDataAdapter(command);
             DataTable dt = new DataTable();
             da.Fill(dt);
+            con.cerrarCon();
             return dt;
+        }
+
+        public void ModificarStock(int stock, int id)
+        {
+            cmd.Connection = con.abrirCon();
+            cmd.CommandText = "ModificarStock";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@stock", stock);
+            cmd.Parameters.AddWithValue("@idPro", id);
+            cmd.ExecuteNonQuery();
+            cmd.Parameters.Clear();
+            con.cerrarCon();
+        }
+
+        public void InactProd(int stock, int id)
+        {
+            cmd.Connection = con.abrirCon();
+            cmd.CommandText = "ProductoInactivo";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@stock", stock);
+            cmd.Parameters.AddWithValue("@idPro", id);
+            cmd.ExecuteNonQuery();
+            cmd.Parameters.Clear();
             con.cerrarCon();
         }
     }

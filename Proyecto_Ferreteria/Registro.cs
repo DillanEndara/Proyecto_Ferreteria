@@ -46,5 +46,31 @@ namespace Proyecto_Ferreteria
             cmbrol.ValueMember = "idRol";
             cmbrol.DataSource = objetoCN.listarRol();
         }
+
+        private void cmbrol_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbrol.SelectedValue.ToString() == "1")
+            {
+                textBox1.Visible = true;
+                butagregar.Enabled = false;
+            }
+            else
+            {
+                textBox1.Visible = false;
+                butagregar.Enabled = true;
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "HolaSoyNuevo")
+            {
+                butagregar.Enabled = true;
+            }
+            else
+            {
+                butagregar.Enabled = false;
+            }
+        }
     }
 }

@@ -37,6 +37,13 @@ namespace Capa_Negocio
             }  
         }
 
+        public DataTable encontrarId(string usu, string pass)
+        {
+            DataTable tableI = new DataTable();
+            tableI = objetoCD.login(usu, pass);
+            return tableI;
+        }
+
 
         CDUsuario objd = new CDUsuario();
         public DataTable CNusuario(CEUsuario obje)

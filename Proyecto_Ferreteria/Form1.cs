@@ -25,6 +25,9 @@ namespace Proyecto_Ferreteria
             idForm = id;
         }
 
+        //Compra compra = new Compra(idForm);
+        //Inventario inventario = new Inventario(idForm);
+
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();

@@ -41,11 +41,28 @@ namespace Capa_Negocio
             return tableC;
         }
 
+        public DataTable datosProd(string id)
+        {
+            DataTable tableD = new DataTable();
+            tableD = objetoCD.datosProd(Convert.ToInt32(id));
+            return tableD;
+        }
+
         public DataTable listarCmb(string id)
         {
             DataTable tableP = new DataTable();
             tableP = objetoCD.listarCmb(Convert.ToInt32(id));
             return tableP;
+        }
+
+        public void StockProd(int stock, string id)
+        {
+            objetoCD.ModificarStock(stock, Convert.ToInt32(id));
+        }
+
+        public void inactivoProd(int stock, string id)
+        {
+            objetoCD.InactProd(stock, Convert.ToInt32(id));
         }
     }
 }

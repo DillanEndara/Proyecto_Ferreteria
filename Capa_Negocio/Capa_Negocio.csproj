@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="CNProducto.cs" />
     <Compile Include="CNUsuario.cs" />
+    <Compile Include="CNVenta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
